@@ -1,0 +1,21 @@
+<!doctype html>
+<html>
+  <body>
+    <script>
+      function debounce(fn, delay) {
+        let timer;
+        return function (...args) {
+          clearTimeout(timer);
+          timer = setTimeout(() => fn(...args), delay);
+        };
+      }
+
+      window.addEventListener(
+        "mousemove",
+        debounce((e) => {
+          console.log(e.clientX, e.clientY);
+        }, 500),
+      );
+    </script>
+  </body>
+</html>

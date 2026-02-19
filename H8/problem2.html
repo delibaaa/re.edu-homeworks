@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Quote</title>
+  </head>
+  <body>
+    <button id="btn">DELIBA BANGERRRRRR</button>
+    <p id="quote"></p>
+
+    <script>
+      document.getElementById("btn").addEventListener("click", async () => {
+        const { quotes } = await fetch("https://dummyjson.com/quotes").then(
+          (r) => r.json(),
+        );
+        const random = quotes[Math.floor(Math.random() * quotes.length)];
+        document.getElementById("quote").textContent = random.quote;
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>COPART</title>
+  </head>
+  <body>
+    <input id="carInput" type="number" placeholder="enter car id" />
+    <div id="carInfo"></div>
+
+    <script>
+      document
+        .getElementById("carInput")
+        .addEventListener("change", async (e) => {
+          const id = e.target.value;
+          try {
+            const res = await fetch(`https://myfakeapi.com/api/cars/${id}`);
+            if (!res.ok) throw new Error();
+            const { Car } = await res.json();
+            document.getElementById("carInfo").innerHTML = `
+          <p>Brand: ${Car.car}</p>
+          <p>Model: ${Car.car_model}</p>
+          <p>Year 6 WELZE METIIIII <33333333333 </p>
+          <p>Price: ${Car.price}</p>
+        `;
+          } catch (error) {
+            alert("invalid id, please try again");
+          }
+        });
+    </script>
+  </body>
+</html>
