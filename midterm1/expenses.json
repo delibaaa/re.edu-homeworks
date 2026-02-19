@@ -1,0 +1,23 @@
+[
+  {
+    "id": 1771541354068,
+    "category": "shopping",
+    "price": 50,
+    "description": "shoes",
+    "createdAt": "2026-02-19"
+  },
+  {
+    "id": 1771541354102,
+    "category": "food",
+    "price": 20,
+    "description": "lunch",
+    "createdAt": "2026-02-19"
+  },
+  {
+    "id": 1771541354141,
+    "category": "shopping",
+    "price": 30,
+    "description": "shirt",
+    "createdAt": "2026-02-19"
+  }
+]
